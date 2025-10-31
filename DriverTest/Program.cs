@@ -1,4 +1,6 @@
-﻿
+﻿//#define _TEST_BASIC_VAR
+#define _TEST_PLCTAG
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,7 +17,7 @@ namespace DriverTest
     {
         static void Main(string[] args)
         {
-            string HostIp = "192.168.0.250";
+            string HostIp = "192.168.0.1";
             string Password = "";
             int res;
             List<ItemAddress> readlist = new List<ItemAddress>();
@@ -31,9 +33,17 @@ namespace DriverTest
             Console.WriteLine("Main - Versuche Verbindungsaufbau zu: " + HostIp);
 
             S7CommPlusConnection conn = new S7CommPlusConnection();
+            conn.OnlySecurePGOrPCAndHMI = true;//Only secure PG/PC and HMI communication
+            System.Diagnostics.Stopwatch stopwatch1 = new System.Diagnostics.Stopwatch();
+            stopwatch1.Start();
             res = conn.Connect(HostIp, Password);
+            stopwatch1.Stop();
+            Console.WriteLine($"PLCType: {conn.PLCInformation.PLCType} | MLFB: {conn.PLCInformation.MLFB} | Firmware: {conn.PLCInformation.Firmware}");
+            Console.WriteLine($"连接耗时{stopwatch1.ElapsedMilliseconds}ms.");
             if (res == 0)
             {
+                Console.WriteLine("按任意键浏览变量");
+                Console.ReadKey();
                 Console.WriteLine("Main - Connect fertig");
 
                 #region Variablenhaushalt browsen
@@ -43,7 +53,8 @@ namespace DriverTest
                 res = conn.Browse(out vars);
                 Console.WriteLine("Main - Browse res=" + res);
                 #endregion
-                List<VarInfo> vars_ = vars.GetRange(0,1000);
+                List<VarInfo> vars_ = vars.GetRange(0,50);
+#if _TEST_PLCTAG
                 #region Werte aller Variablen einlesen
                 Console.WriteLine("Main - Lese Werte aller Variablen aus");
 
@@ -77,18 +88,20 @@ namespace DriverTest
                 Console.ReadKey();
                 while (res == 0)
                 {
-                    System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
-                    stopwatch.Start();
+                    System.Diagnostics.Stopwatch stopwatch2 = new System.Diagnostics.Stopwatch();
+                    stopwatch2.Start();
                     res = tags.ReadTags(conn);
-                    stopwatch.Stop();
-                    long ms = stopwatch.ElapsedMilliseconds;
+                    stopwatch2.Stop();
+                    long ms = stopwatch2.ElapsedMilliseconds;
                     if (res == 0)
                     {
                         string header = $"读取{vars_.Count}个变量耗时{ms}毫秒";
                         Console.WriteLine(header);
                     }
                 }
-                
+#endif
+
+#if _TEST_BASIC_VAR
                 #region Werte aller Variablen einlesen
                 Console.WriteLine("Main - Lese Werte aller Variablen aus");
 
@@ -123,6 +136,7 @@ namespace DriverTest
                     Console.WriteLine("===============================================================");
                 }
                 #endregion
+#endif
 
                 /*
                 #region Test: Wert schreiben
