@@ -10,8 +10,3 @@ C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\o
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.CopyComplete
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.exe
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.pdb
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7PublicKeys.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7Utilities.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\zlib.net.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusAuth.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7Family0.dll

@@ -12,11 +12,12 @@ namespace S7CommPlusGUIBrowser
     {
 
         private S7CommPlusConnection conn = null;
+        private bool onlySecurePGOrPCAndHMI = false;
 
         public Form1()
         {
             InitializeComponent();
-
+            
             string[] args = Environment.GetCommandLineArgs();
             // 1st argument can be the plc ip-address, otherwise use default
             if (args.Length >= 2)
@@ -32,8 +33,7 @@ namespace S7CommPlusGUIBrowser
 
         private void setStatus(string status)
         {
-            lbStatus.Text = status;
-            lbStatus.Refresh();
+            lbStatus.Text = $"Status:{status}|";
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -42,6 +42,7 @@ namespace S7CommPlusGUIBrowser
 
             if (conn != null) conn.Disconnect();
             conn = new S7CommPlusConnection();
+            conn.OnlySecurePGOrPCAndHMI = onlySecurePGOrPCAndHMI;
             int res = conn.Connect(tbIpAddress.Text, tbPassword.Text);
             if (res != 0)
             {
@@ -49,7 +50,7 @@ namespace S7CommPlusGUIBrowser
                 return;
             }
             setStatus("connected");
-            txt_plcInfo.Text = $"PLCType: {conn.PLCInformation.PLCType}";
+            txt_plcInfo.Text = $"PLCType: {conn.PLCInformation.PLCType}|MLFB: {conn.PLCInformation.MLFB}|Firmware: {conn.PLCInformation.Firmware}";
             treeView1.Nodes.Clear();
             setStatus("loading...");
             List<S7CommPlusConnection.DatablockInfo> dbInfoList;
@@ -401,6 +402,11 @@ namespace S7CommPlusGUIBrowser
             {
                 MessageBox.Show("ERROR: " + ex.Message);
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+                onlySecurePGOrPCAndHMI = checkBox1.Checked;
         }
     }
 }

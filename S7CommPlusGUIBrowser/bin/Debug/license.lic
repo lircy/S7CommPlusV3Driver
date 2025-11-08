@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<license id="fe76d797-6ecf-4e79-aa95-e2d30037a4c2" generate="2025-11-03T03:21:24.1952286" expiration="2025-11-10T03:21:24.1952286" type="Standard" AppName="Application" Fingerprint="0E963B0E20A1F6AC">
+  <name>EasyLicense</name>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256" />
+        <DigestValue>2ARv1/EpdnU8XLyDEGR1br2dBD1EhjPyTuIem87R0YM=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>DB6lmvc3b0zI9Y7k+SvGegAroCRxNxbIOAZydZMz7EpFW8yNDy6iIU9uuUBIhSYdk4mEIoroxFA6Ra2Ha9Gc0bShMtJdnyBVw2My+9DNFf1iA0Nzf7qdEUfR3dd4I+w/awgGBfAqO67LxPrCva3i+AitHgSMywadcJ+45lKJDbE=</SignatureValue>
+  </Signature>
+</license>

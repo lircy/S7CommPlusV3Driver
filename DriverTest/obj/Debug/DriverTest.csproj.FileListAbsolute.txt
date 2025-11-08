@@ -3,12 +3,6 @@ C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\D
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.pdb
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\S7CommPlusDriver.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\S7PublicKeys.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\S7Utilities.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\zlib.net.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\S7CommPlusAuth.dll
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\S7Family0.dll
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
-C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csprojAssemblyReference.cache

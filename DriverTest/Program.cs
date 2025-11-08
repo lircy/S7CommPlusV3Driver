@@ -10,14 +10,13 @@ using S7CommPlusDriver;
 
 using S7CommPlusDriver.ClientApi;
 
-
 namespace DriverTest
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string HostIp = "192.168.0.1";
+            string HostIp = "192.168.0.250";
             string Password = "";
             int res;
             List<ItemAddress> readlist = new List<ItemAddress>();
@@ -33,7 +32,8 @@ namespace DriverTest
             Console.WriteLine("Main - Versuche Verbindungsaufbau zu: " + HostIp);
 
             S7CommPlusConnection conn = new S7CommPlusConnection();
-            conn.OnlySecurePGOrPCAndHMI = true;//Only secure PG/PC and HMI communication
+            conn.OnlySecurePGOrPCAndHMI = false;
+            
             System.Diagnostics.Stopwatch stopwatch1 = new System.Diagnostics.Stopwatch();
             stopwatch1.Start();
             res = conn.Connect(HostIp, Password);
@@ -53,7 +53,7 @@ namespace DriverTest
                 res = conn.Browse(out vars);
                 Console.WriteLine("Main - Browse res=" + res);
                 #endregion
-                List<VarInfo> vars_ = vars.GetRange(0,50);
+                List<VarInfo> vars_ = vars.GetRange(0, 1000);
 #if _TEST_PLCTAG
                 #region Werte aller Variablen einlesen
                 Console.WriteLine("Main - Lese Werte aller Variablen aus");
@@ -63,7 +63,8 @@ namespace DriverTest
 
                 foreach (var v in vars_)
                 {
-                    taglist.Add(PlcTags.TagFactory(v.Name, new ItemAddress(v.AccessSequence), v.Softdatatype));
+                    ItemAddress itemAddress = new ItemAddress(v.AccessSequence);
+                    taglist.Add(PlcTags.TagFactory(v.Name, itemAddress, v.Softdatatype));
                 }
                 foreach (var t in taglist)
                 {
@@ -98,6 +99,7 @@ namespace DriverTest
                         string header = $"读取{vars_.Count}个变量耗时{ms}毫秒";
                         Console.WriteLine(header);
                     }
+                    System.Threading.Thread.Sleep(10);
                 }
 #endif
 
