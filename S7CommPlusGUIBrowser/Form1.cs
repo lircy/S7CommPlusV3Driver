@@ -39,8 +39,7 @@ namespace S7CommPlusGUIBrowser
         private void btnConnect_Click(object sender, EventArgs e)
         {
             setStatus("connecting...");
-
-            if (conn != null) conn.Disconnect();
+            if (conn != null)conn.Disconnect();
             conn = new S7CommPlusConnection();
             conn.OnlySecurePGOrPCAndHMI = onlySecurePGOrPCAndHMI;
             int res = conn.Connect(tbIpAddress.Text, tbPassword.Text);
@@ -106,12 +105,11 @@ namespace S7CommPlusGUIBrowser
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
             setStatus("disconnecting...");
-
             if (conn != null) conn.Disconnect();
-            conn = null;
             treeView1.Nodes.Clear();
             txt_plcInfo.Text = "PLCType:";
             setStatus("disconnected");
+            conn = null;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -352,10 +350,8 @@ namespace S7CommPlusGUIBrowser
             if (tag == null) return;
 
             tbSymbolicAddress.Text = tag.Address.GetAccessString();
-
-            PlcTags tags = new PlcTags();
-            tags.AddTag(tag);
-            if (tags.ReadTags(conn) != 0) return;
+            
+            if (PlcTags.ReadTags(conn,new List<PlcTag> { tag}) != 0) return;
             tbValue.Text = tag.ToString();
         }
 

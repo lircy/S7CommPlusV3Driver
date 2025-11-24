@@ -6,3 +6,11 @@ C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\bin\Debug\S
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CoreCompileInputs.cache
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe.config
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.pdb
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\S7CommPlusDriver.dll
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete

@@ -10,3 +10,15 @@ C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\o
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.CopyComplete
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.exe
 C:\Users\ShenX\Desktop\DiscoverDevices\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.pdb
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusGUIBrowser.exe.config
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusGUIBrowser.exe
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusGUIBrowser.pdb
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusDriver.dll
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csprojAssemblyReference.cache
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.Form1.resources
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.Properties.Resources.resources
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.GenerateResource.cache
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.CoreCompileInputs.cache
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.CopyComplete
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.exe
+C:\Users\ShenX\Desktop\S7CommPlusDriver_Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.pdb
