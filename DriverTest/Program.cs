@@ -55,7 +55,7 @@ namespace DriverTest
                 res = conn.Browse(out vars);
                 Console.WriteLine("Main - Browse res=" + res);
                 #endregion
-                List<VarInfo> vars_ = vars.GetRange(0, 1000);
+                List<VarInfo> vars_ = vars.GetRange(0, 10);
 #if _TEST_PLCTAG
                 #region Werte aller Variablen einlesen
                 Console.WriteLine("Main - Lese Werte aller Variablen aus");
@@ -66,6 +66,8 @@ namespace DriverTest
                 {
                     ItemAddress itemAddress = new ItemAddress(v.AccessSequence);
                     //S7p.DecodeUInt32Vlq(new MemoryStream(var1_crc_bytes), out itemAddress.SymbolCrc);
+                    //Console.WriteLine($"{v.Name}<---->{v.AccessSequence}");
+                    //itemAddress.SymbolCrc = AGLinkCRC32.ComputeForSymbol(v.AccessSequence);
                     taglist.Add(PlcTags.TagFactory(v.Name, itemAddress, v.Softdatatype));
                 }
                 if (res == 0)
@@ -85,14 +87,14 @@ namespace DriverTest
                 #endregion
                 Console.WriteLine("按任意键开始读或订阅");
                 Console.ReadKey();
-                res = conn.SubscriptionCreate(taglist, 100);
-                if (res == 0)
-                {
-                    Task.Run(() =>
-                    {
-                        conn.TestWaitForVariableChangeNotifications(50000000000);
-                    });
-                }
+                //res = conn.SubscriptionCreate(taglist, 100);
+                //if (res == 0)
+                //{
+                //    Task.Run(() =>
+                //    {
+                //        conn.TestWaitForVariableChangeNotifications(50000000000);
+                //    });
+                //}
                 while (res == 0)
                 {
                     System.Diagnostics.Stopwatch stopwatch2 = new System.Diagnostics.Stopwatch();
@@ -105,7 +107,7 @@ namespace DriverTest
                         string header = $"读取{vars_.Count}个变量耗时{ms}毫秒";
                         Console.WriteLine(header);
                     }
-                    //System.Threading.Thread.Sleep(50);
+                    System.Threading.Thread.Sleep(1000);
                 }
 #endif
 

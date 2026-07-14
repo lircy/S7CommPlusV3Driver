@@ -1,0 +1,12 @@
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Release\S7CommPlusGUIBrowser.exe.config
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Release\S7CommPlusGUIBrowser.exe
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Release\S7CommPlusGUIBrowser.pdb
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Release\S7CommPlusDriver.dll
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Release\S7CommPlusGUIBrowser.csprojAssemblyReference.cache
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Release\S7CommPlusGUIBrowser.Form1.resources
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Release\S7CommPlusGUIBrowser.Properties.Resources.resources
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Release\S7CommPlusGUIBrowser.csproj.GenerateResource.cache
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Release\S7CommPlusGUIBrowser.csproj.CoreCompileInputs.cache
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Release\S7CommPlusGUIBrowser.csproj.CopyComplete
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Release\S7CommPlusGUIBrowser.exe
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Release\S7CommPlusGUIBrowser.pdb

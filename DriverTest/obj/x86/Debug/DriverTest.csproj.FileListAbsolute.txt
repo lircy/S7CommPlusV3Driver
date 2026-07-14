@@ -1,0 +1,105 @@
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe.config
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.pdb
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.dll
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.pdb
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll.config
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.pdb
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csprojAssemblyReference.cache
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CoreCompileInputs.cache
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CopyComplete
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.exe
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.pdb
+E:\Materials\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\BouncyCastle.Crypto.dll
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe.config
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.pdb
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\BouncyCastle.Crypto.dll
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.dll
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.pdb
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll.config
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.pdb
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csprojAssemblyReference.cache
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CoreCompileInputs.cache
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CopyComplete
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.exe
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.pdb
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7PublicKeys.dll
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7Utilities.dll
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusAuth.dll
+E:\Materials\SeimensCommProtocol\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7Family0.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe.config
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.pdb
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\BouncyCastle.Crypto.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7Utilities.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7PublicKeys.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\License.Lib.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusAuth.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7Family0.dll
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.pdb
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll.config
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.pdb
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csprojAssemblyReference.cache
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CoreCompileInputs.cache
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CopyComplete
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.exe
+D:\personal data\S7CommPlus协议研究资料\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\BouncyCastle.Crypto.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll.config
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CoreCompileInputs.cache
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.exe
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe.config
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Wrapper.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Wrapper.pdb
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Native_x64.dll
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Native_x86.dll
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe.config
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.pdb
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\BouncyCastle.Crypto.dll
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Wrapper.dll
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.dll
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.pdb
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll.config
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Wrapper.pdb
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.pdb
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csprojAssemblyReference.cache
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CoreCompileInputs.cache
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CopyComplete
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.exe
+D:\Desktop\ClaudeWorkspace\Backup\S7ComPlus20260705\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csprojAssemblyReference.cache
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CopyComplete
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Native_x64.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Native_x86.dll
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Native_x64.dll
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Native_x86.dll
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe.config
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.exe
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\DriverTest.pdb
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\BouncyCastle.Crypto.dll
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Wrapper.dll
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.dll
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.pdb
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\S7CommPlusDriver.dll.config
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\HarpoS7Wrapper.pdb
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\bin\x86\Debug\zlib.net.pdb
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csprojAssemblyReference.cache
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CoreCompileInputs.cache
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.csproj.CopyComplete
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.exe
+D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusDriver-master\src\DriverTest\obj\x86\Debug\DriverTest.pdb

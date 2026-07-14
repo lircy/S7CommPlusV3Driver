@@ -1,0 +1,17 @@
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\HarpoS7Native_x64.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\HarpoS7Native_x86.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\DriverTest.exe.config
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\DriverTest.exe
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\DriverTest.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\BouncyCastle.Crypto.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\S7CommPlusDriver.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\HarpoS7Wrapper.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\zlib.net.dll
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\S7CommPlusDriver.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\S7CommPlusDriver.dll.config
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\bin\x64\Release\HarpoS7Wrapper.pdb
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x64\Release\DriverTest.csprojAssemblyReference.cache
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x64\Release\DriverTest.csproj.CoreCompileInputs.cache
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x64\Release\DriverTest.csproj.CopyComplete
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x64\Release\DriverTest.exe
+D:\Desktop\ClaudeWorkspace\S7ComPlus\S7CommPlusDriver-master\src\DriverTest\obj\x64\Release\DriverTest.pdb
