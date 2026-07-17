@@ -1,5 +1,6 @@
 ﻿using HarpoS7Wrapper;
 using System;
+using System.Diagnostics;
 using System.Security.Cryptography;
 
 namespace TestHarpoS7Native
@@ -18,8 +19,15 @@ namespace TestHarpoS7Native
 
         private static void ExcuteTest()
         {
-            var plcFingerprint = RealPlcFingerprint;//模拟从PLC或PLC模拟器接收指纹
-            Console.WriteLine($"已从客户端接收到Fingerprint：{plcFingerprint}");
+            // Test both PlcSim and RealPlc with key-reuse mode
+            TestWithFingerprint(PlcSimFingerprint);
+            Console.WriteLine();
+            TestWithFingerprint(RealPlcFingerprint);
+        }
+
+        private static void TestWithFingerprint(string plcFingerprint)
+        {
+            Console.WriteLine($"=== {plcFingerprint} ===");
             var store = new DefaultPublicKeyStore();
             var publicKey = new byte[store.GetPublicKeyLength(plcFingerprint)];
             try
@@ -28,58 +36,114 @@ namespace TestHarpoS7Native
             }
             catch (UnknownPublicKeyException)
             {
-                Console.WriteLine("[-] Public key for this fingerprint was not found in the key store. " +
-                                  "You need to find the appropriate key and add it to the key store.");
+                Console.WriteLine("[-] Public key not found in key store.");
                 return;
             }
-            // Input - public key family (must be read from the fingerprint)
-            // Example: 00:181B7B0847D11694, the 00 before the ':' is the public key family
-            // Currently the 00, 01 and 03 families are supported.
-            //var family = EPublicKeyFamily.S71500;
             var family = plcFingerprint.ToPublicKeyFamily();
-            // Output - "Encrypted key" which you send back to the PLC (216 bytes long)
-            var keyBlob = new byte[Constants.EncryptedBlobLengthPlcSim];
-            if (family != EPublicKeyFamily.PlcSim)
-                keyBlob = new byte[Constants.EncryptedBlobLengthRealPlc];
-            else
-                keyBlob = new byte[Constants.EncryptedBlobLengthPlcSim];
-            // Output - Session key used later on to calculate packet integrity hashes (24 bytes long)
-            sessionKey = new byte[Constants.SessionKeyLength];
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine($"已从客户端接收到Challenge：{BitConverter.ToString(challenge)}");
-                int startT = Environment.TickCount;
-                LegacyAuthenticationScheme.Authenticate(keyBlob, sessionKey, challenge, publicKey, family);
-                int endT = Environment.TickCount;
-                Console.WriteLine($"第{i}次计算结果KeyBlob耗时{endT - startT}：{BitConverter.ToString(keyBlob)}");
-            }
-            //Console.WriteLine($"计算结果KeyBlob：{BitConverter.ToString(keyBlob)}");
-            //client.SendAsync(keyBlob);
 
-            var blobData = new byte[LegitimateScheme.OutputBlobDataLengthPlcSim];
+            int blobLen = (family != EPublicKeyFamily.PlcSim)
+                ? Constants.EncryptedBlobLengthRealPlc
+                : Constants.EncryptedBlobLengthPlcSim;
+            var keyBlob = new byte[blobLen];
+            sessionKey = new byte[Constants.SessionKeyLength];
+
+            int iterations = 100;
+
+            // === Test 1: No reuse (fresh keys every call) ===
+            Console.Write("  Normal (fresh keys):      ");
+            LegacyAuthenticationScheme.SetKeyReuseMode(0);
+            // Warmup
+            LegacyAuthenticationScheme.Authenticate(keyBlob, sessionKey, challenge, publicKey, family);
+
+            var sw = Stopwatch.StartNew();
+            long totalTicks = 0, minTicks = long.MaxValue, maxTicks = 0;
+            for (int i = 0; i < iterations; i++)
+            {
+                sw.Restart();
+                LegacyAuthenticationScheme.Authenticate(keyBlob, sessionKey, challenge, publicKey, family);
+                sw.Stop();
+                long ticks = sw.ElapsedTicks;
+                totalTicks += ticks;
+                if (ticks < minTicks) minTicks = ticks;
+                if (ticks > maxTicks) maxTicks = ticks;
+            }
+            double avgMs = (totalTicks / (double)iterations) / (Stopwatch.Frequency / 1000.0);
+            double minMs = minTicks / (Stopwatch.Frequency / 1000.0);
+            double maxMs = maxTicks / (Stopwatch.Frequency / 1000.0);
+            Console.WriteLine($"avg={avgMs:F3}ms min={minMs:F3}ms max={maxMs:F3}ms");
+
+            // === Test 2: Reuse mode — 1st call (pays full price) ===
+            Console.Write("  Reuse mode, 1st call:     ");
+            LegacyAuthenticationScheme.SetKeyReuseMode(0); // clear saved state
+            LegacyAuthenticationScheme.SetKeyReuseMode(1); // enable save-once-reuse
+            sw.Restart();
+            LegacyAuthenticationScheme.Authenticate(keyBlob, sessionKey, challenge, publicKey, family);
+            sw.Stop();
+            double firstMs = sw.ElapsedTicks / (Stopwatch.Frequency / 1000.0);
+            Console.WriteLine($"{firstMs:F3}ms (generates + saves)");
+
+            // Save the seed/IV from first call for verification
+            byte[] savedKeyBlob = new byte[blobLen];
+            Array.Copy(keyBlob, savedKeyBlob, blobLen);
+
+            // === Test 3: Reuse mode — subsequent calls (reuses saved) ===
+            Console.Write("  Reuse mode, subsequent:   ");
+            totalTicks = 0; minTicks = long.MaxValue; maxTicks = 0;
+            for (int i = 0; i < iterations; i++)
+            {
+                sw.Restart();
+                LegacyAuthenticationScheme.Authenticate(keyBlob, sessionKey, challenge, publicKey, family);
+                sw.Stop();
+                long ticks = sw.ElapsedTicks;
+                totalTicks += ticks;
+                if (ticks < minTicks) minTicks = ticks;
+                if (ticks > maxTicks) maxTicks = ticks;
+            }
+            avgMs = (totalTicks / (double)iterations) / (Stopwatch.Frequency / 1000.0);
+            minMs = minTicks / (Stopwatch.Frequency / 1000.0);
+            maxMs = maxTicks / (Stopwatch.Frequency / 1000.0);
+            Console.WriteLine($"avg={avgMs:F3}ms min={minMs:F3}ms max={maxMs:F3}ms");
+
+            // Verify seed/IV match between first and subsequent calls
+            bool seedMatch = true;
+            int firstDiff = -1;
+            for (int i = 0; i < blobLen; i++)
+            {
+                if (keyBlob[i] != savedKeyBlob[i]) { seedMatch = false; firstDiff = i; break; }
+            }
+            if (seedMatch)
+                Console.WriteLine($"  Seed/IV consistency check: PASS (identical, {blobLen} bytes)");
+            else
+            {
+                Console.WriteLine($"  Seed/IV consistency check: FAIL at offset {firstDiff} " +
+                    $"(first=0x{savedKeyBlob[firstDiff]:X2} reuse=0x{keyBlob[firstDiff]:X2})");
+                // Show hex context around difference
+                int start = Math.Max(0, firstDiff - 8);
+                int end = Math.Min(blobLen, firstDiff + 24);
+                Console.Write($"    Saved[{start}..{end}]: ");
+                for (int i = start; i < end; i++) Console.Write($"{savedKeyBlob[i]:X2} ");
+                Console.WriteLine();
+                Console.Write($"    Reuse[{start}..{end}]: ");
+                for (int i = start; i < end; i++) Console.Write($"{keyBlob[i]:X2} ");
+                Console.WriteLine();
+            }
+
+            // Verify legitimation still works
             if (family == EPublicKeyFamily.PlcSim)
             {
-                blobData = new byte[LegitimateScheme.OutputBlobDataLengthPlcSim];
-                LegitimateScheme.SolveLegitimateChallengePlcSim(
-                blobData, // OUT - send this with SetVarSubStreamed
-                challenge, // IN - get this with GetVarSubStreamed
-                publicKey, // IN - get this from a local storage by matching the fingerprint sent by the PLC
-                sessionKey, // IN - generated by LegacyAuthenticationScheme.Authenticate (TODO: check TLS)
-                "12345678"); // IN - password required by the PLC
-                Console.WriteLine($"计算结果Blob：{BitConverter.ToString(blobData)}");
+                var blobData = new byte[LegitimateScheme.OutputBlobDataLengthPlcSim];
+                LegitimateScheme.SolveLegitimateChallengePlcSim(blobData, challenge, publicKey, sessionKey, "12345678");
+                Console.WriteLine($"  Legitimation: OK (blob={blobData.Length} bytes)");
             }
-            if (family == EPublicKeyFamily.S71200 || family == EPublicKeyFamily.S71500)
+            else
             {
-                blobData = new byte[LegitimateScheme.OutputBlobDataLengthRealPlc];
-                LegitimateScheme.SolveLegitimateChallengeRealPlc(
-                blobData, // OUT - send this with SetVarSubStreamed
-                challenge, // IN - get this with GetVarSubStreamed
-                publicKey, // IN - get this from a local storage by matching the fingerprint sent by the PLC
-                family, // IN - public key family (must be read from the fingerprint)
-                sessionKey, // IN - generated by LegacyAuthenticationScheme.Authenticate (TODO: check TLS)
-                "12345678"); // IN - password required by the PLC
-                Console.WriteLine($"计算结果Blob：{BitConverter.ToString(blobData)}");
+                var blobData = new byte[LegitimateScheme.OutputBlobDataLengthRealPlc];
+                LegitimateScheme.SolveLegitimateChallengeRealPlc(blobData, challenge, publicKey, family, sessionKey, "12345678");
+                Console.WriteLine($"  Legitimation: OK (blob={blobData.Length} bytes)");
             }
+
+            // Cleanup
+            LegacyAuthenticationScheme.SetKeyReuseMode(0);
         }
     }
 }

@@ -124,7 +124,18 @@ namespace S7CommPlusGUIBrowser
             setStatus("loading...");
             e.Node.Nodes.Clear();
             uint relTiId = (uint)e.Node.Tag;
-            PObject pObj = conn.getTypeInfoByRelId(relTiId);
+            PObject pObj = null;
+            try
+            {
+                pObj = conn.getTypeInfoByRelId(relTiId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error expanding node: " + ex.Message);
+                setStatus("Error: " + ex.Message);
+                e.Node.Nodes.Add("Error: " + ex.Message);
+                return;
+            }
             setStatus("connected");
 
             if (pObj == null || pObj.VarnameList == null) return;

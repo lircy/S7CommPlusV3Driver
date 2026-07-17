@@ -43,3 +43,12 @@ D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\DriverTest\ob
 D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
 D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
 D:\Desktop\步科HMI与欧姆龙PLC测试程序\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CoreCompileInputs.cache
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe.config
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.pdb
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\bin\Debug\BouncyCastle.Crypto.dll
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\bin\Debug\S7CommPlusDriver.dll
+D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
