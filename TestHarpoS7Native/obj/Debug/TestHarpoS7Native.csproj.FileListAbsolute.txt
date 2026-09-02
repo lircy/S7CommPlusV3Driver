@@ -36,3 +36,11 @@ D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debu
 D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.csproj.CopyComplete
 D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.exe
 D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.pdb
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\bin\Debug\TestHarpoS7Native.exe
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\bin\Debug\TestHarpoS7Native.pdb
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\bin\Debug\HarpoS7Wrapper.dll
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.csprojAssemblyReference.cache
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.csproj.CoreCompileInputs.cache
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.csproj.CopyComplete
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.exe
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.pdb

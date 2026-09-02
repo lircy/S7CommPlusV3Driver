@@ -52,3 +52,13 @@ D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\bin\Debug\Drive
 D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\bin\Debug\BouncyCastle.Crypto.dll
 D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\bin\Debug\S7CommPlusDriver.dll
 D:\Desktop\EZ-EDS V3.23.1.20171205\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe.config
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.pdb
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\BouncyCastle.Crypto.dll
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\bin\Debug\S7CommPlusDriver.dll
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csprojAssemblyReference.cache
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CoreCompileInputs.cache
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
