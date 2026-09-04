@@ -1,0 +1,14 @@
+CONV Powin储能项目C区.IArea.AxisUM00_Actor_Interface_AddressIn dt=PD_TEL3_IN (Siemens.Simatic.Lang.Model.Blocks.UserTypeData) InstId=200156
+CONVDONE Powin储能项目C区.IArea.AxisUM00_Actor_Interface_AddressIn iface=ok
+CONV Powin储能项目C区.IArea.E800-E1_IN dt=Inverter_E800_IN (Siemens.Simatic.Lang.Model.Blocks.UserTypeData) InstId=66352
+CONVDONE Powin储能项目C区.IArea.E800-E1_IN iface=ok
+CONV Powin储能项目C区.IArea.KeyenceDLPN10P150-1_IN dt=DLPN1KeyenceIn (Siemens.Simatic.Lang.Model.Blocks.UserTypeData) InstId=117340
+CONVDONE Powin储能项目C区.IArea.KeyenceDLPN10P150-1_IN iface=ok
+CONV Powin储能项目C区.IArea.OP150Camera1 dt=Camera (Siemens.Simatic.Lang.Model.Blocks.UserTypeData) InstId=171536
+CONVDONE Powin储能项目C区.IArea.OP150Camera1 iface=ok
+CONV Powin储能项目C区.QArea.AxisUM00_Actor_Interface_AddressOut dt=PD_TEL3_OUT (Siemens.Simatic.Lang.Model.Blocks.UserTypeData) InstId=200132
+CONVDONE Powin储能项目C区.QArea.AxisUM00_Actor_Interface_AddressOut iface=ok
+CONV Powin储能项目C区.QArea.E800-E1_OUT dt=Inverter_E800_OUT (Siemens.Simatic.Lang.Model.Blocks.UserTypeData) InstId=66356
+CONVDONE Powin储能项目C区.QArea.E800-E1_OUT iface=ok
+CONV Powin储能项目C区.QArea.KeyenceDLPN10P150-1_OUT dt=DLPN1KeyenceOut (Siemens.Simatic.Lang.Model.Blocks.UserTypeData) InstId=118433
+CONVDONE Powin储能项目C区.QArea.KeyenceDLPN10P150-1_OUT iface=ok

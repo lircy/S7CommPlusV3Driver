@@ -40,7 +40,7 @@ namespace DriverTest
             
             System.Diagnostics.Stopwatch stopwatch1 = new System.Diagnostics.Stopwatch();
             stopwatch1.Start();
-            res = conn.Connect(HostIp, Password);
+            res = conn.Connect(HostIp, Password)/*conn.LoadSymbolsFromFile(@"D:\Desktop\demo\test1.ap17")*//*conn.LoadSymbolsFromFile(@"D:\Desktop\demo\test2.zap18")*/;
             stopwatch1.Stop();
             Console.WriteLine($"PLCType: {conn.PLCInformation.PLCType} | MLFB: {conn.PLCInformation.MLFB} | Firmware: {conn.PLCInformation.Firmware}");
             Console.WriteLine($"连接耗时{stopwatch1.ElapsedMilliseconds}ms.");

@@ -33,6 +33,8 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbIpAddress = new System.Windows.Forms.TextBox();
+            this.btnOpenProject = new System.Windows.Forms.Button();
+            this.btnOnlineProject = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.imageListTreeIcons = new System.Windows.Forms.ImageList(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -46,6 +48,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lbStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.txt_plcInfo = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tbDatatype = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -60,9 +64,11 @@
             this.groupBox1.Controls.Add(this.tbPassword);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tbIpAddress);
+            this.groupBox1.Controls.Add(this.btnOpenProject);
+            this.groupBox1.Controls.Add(this.btnOnlineProject);
             this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(171, 131);
+            this.groupBox1.Size = new System.Drawing.Size(197, 166);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Connection";
@@ -70,7 +76,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(9, 112);
+            this.checkBox1.Location = new System.Drawing.Point(9, 143);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(156, 16);
             this.checkBox1.TabIndex = 12;
@@ -80,7 +86,7 @@
             // 
             // btnDisconnect
             // 
-            this.btnDisconnect.Location = new System.Drawing.Point(85, 90);
+            this.btnDisconnect.Location = new System.Drawing.Point(9, 117);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(75, 21);
             this.btnDisconnect.TabIndex = 5;
@@ -112,7 +118,7 @@
             this.tbPassword.Location = new System.Drawing.Point(9, 66);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(151, 21);
+            this.tbPassword.Size = new System.Drawing.Size(179, 21);
             this.tbPassword.TabIndex = 2;
             // 
             // label1
@@ -128,9 +134,29 @@
             // 
             this.tbIpAddress.Location = new System.Drawing.Point(9, 30);
             this.tbIpAddress.Name = "tbIpAddress";
-            this.tbIpAddress.Size = new System.Drawing.Size(151, 21);
+            this.tbIpAddress.Size = new System.Drawing.Size(179, 21);
             this.tbIpAddress.TabIndex = 0;
-            this.tbIpAddress.Text = "192.168.0.1";
+            this.tbIpAddress.Text = "192.168.0.250";
+            // 
+            // btnOpenProject
+            // 
+            this.btnOpenProject.Location = new System.Drawing.Point(90, 117);
+            this.btnOpenProject.Name = "btnOpenProject";
+            this.btnOpenProject.Size = new System.Drawing.Size(98, 21);
+            this.btnOpenProject.TabIndex = 8;
+            this.btnOpenProject.Text = "Offline Browse";
+            this.btnOpenProject.UseVisualStyleBackColor = true;
+            this.btnOpenProject.Click += new System.EventHandler(this.btnOfflineBrowse_Click);
+            // 
+            // btnOnlineProject
+            // 
+            this.btnOnlineProject.Location = new System.Drawing.Point(90, 90);
+            this.btnOnlineProject.Name = "btnOnlineProject";
+            this.btnOnlineProject.Size = new System.Drawing.Size(98, 21);
+            this.btnOnlineProject.TabIndex = 9;
+            this.btnOnlineProject.Text = "Online Browse";
+            this.btnOnlineProject.UseVisualStyleBackColor = true;
+            this.btnOnlineProject.Click += new System.EventHandler(this.btnOnlineBrowse_Click);
             // 
             // treeView1
             // 
@@ -139,10 +165,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeView1.ImageIndex = 0;
             this.treeView1.ImageList = this.imageListTreeIcons;
-            this.treeView1.Location = new System.Drawing.Point(12, 148);
+            this.treeView1.Location = new System.Drawing.Point(12, 179);
             this.treeView1.Name = "treeView1";
             this.treeView1.SelectedImageIndex = 0;
-            this.treeView1.Size = new System.Drawing.Size(776, 242);
+            this.treeView1.Size = new System.Drawing.Size(776, 278);
             this.treeView1.TabIndex = 1;
             this.treeView1.AfterExpand += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterExpand);
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -192,6 +218,8 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.tbDatatype);
+            this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.btnRead);
             this.groupBox2.Controls.Add(this.tbValue);
             this.groupBox2.Controls.Add(this.label5);
@@ -199,9 +227,9 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.tbSymbol);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(189, 11);
+            this.groupBox2.Location = new System.Drawing.Point(215, 11);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(599, 131);
+            this.groupBox2.Size = new System.Drawing.Size(573, 166);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data";
@@ -209,9 +237,9 @@
             // btnRead
             // 
             this.btnRead.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRead.Location = new System.Drawing.Point(518, 28);
+            this.btnRead.Location = new System.Drawing.Point(492, 27);
             this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(75, 21);
+            this.btnRead.Size = new System.Drawing.Size(75, 22);
             this.btnRead.TabIndex = 11;
             this.btnRead.Text = "Read";
             this.btnRead.UseVisualStyleBackColor = true;
@@ -221,16 +249,16 @@
             // 
             this.tbValue.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbValue.Location = new System.Drawing.Point(6, 102);
+            this.tbValue.Location = new System.Drawing.Point(6, 141);
             this.tbValue.Name = "tbValue";
             this.tbValue.ReadOnly = true;
-            this.tbValue.Size = new System.Drawing.Size(587, 21);
+            this.tbValue.Size = new System.Drawing.Size(561, 21);
             this.tbValue.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 87);
+            this.label5.Location = new System.Drawing.Point(6, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 9;
@@ -243,7 +271,7 @@
             this.tbSymbolicAddress.Location = new System.Drawing.Point(6, 66);
             this.tbSymbolicAddress.Name = "tbSymbolicAddress";
             this.tbSymbolicAddress.ReadOnly = true;
-            this.tbSymbolicAddress.Size = new System.Drawing.Size(587, 21);
+            this.tbSymbolicAddress.Size = new System.Drawing.Size(480, 21);
             this.tbSymbolicAddress.TabIndex = 8;
             // 
             // label4
@@ -259,15 +287,15 @@
             // 
             this.tbSymbol.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSymbol.Location = new System.Drawing.Point(6, 30);
+            this.tbSymbol.Location = new System.Drawing.Point(6, 28);
             this.tbSymbol.Name = "tbSymbol";
-            this.tbSymbol.Size = new System.Drawing.Size(506, 21);
+            this.tbSymbol.Size = new System.Drawing.Size(480, 21);
             this.tbSymbol.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 15);
+            this.label3.Location = new System.Drawing.Point(6, 13);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 12);
             this.label3.TabIndex = 0;
@@ -278,7 +306,7 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lbStatus,
             this.txt_plcInfo});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 393);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 462);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 3;
@@ -296,11 +324,30 @@
             this.txt_plcInfo.Size = new System.Drawing.Size(60, 17);
             this.txt_plcInfo.Text = "PLCType:";
             // 
+            // tbDatatype
+            // 
+            this.tbDatatype.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDatatype.Location = new System.Drawing.Point(6, 103);
+            this.tbDatatype.Name = "tbDatatype";
+            this.tbDatatype.ReadOnly = true;
+            this.tbDatatype.Size = new System.Drawing.Size(480, 21);
+            this.tbDatatype.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 88);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 12);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Datatype:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 415);
+            this.ClientSize = new System.Drawing.Size(800, 484);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.treeView1);
@@ -342,6 +389,10 @@
         private System.Windows.Forms.ToolStripStatusLabel txt_plcInfo;
         private System.Windows.Forms.ToolStripStatusLabel lbStatus;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnOpenProject;
+        private System.Windows.Forms.Button btnOnlineProject;
+        private System.Windows.Forms.TextBox tbDatatype;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -1,9 +1,10 @@
-﻿using S7CommPlusDriver;
+using S7CommPlusDriver;
 using S7CommPlusDriver.ClientApi;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace S7CommPlusGUIBrowser
@@ -13,11 +14,12 @@ namespace S7CommPlusGUIBrowser
 
         private S7CommPlusConnection conn = null;
         private bool onlySecurePGOrPCAndHMI = false;
+        private bool connected = false;
 
         public Form1()
         {
             InitializeComponent();
-            
+
             string[] args = Environment.GetCommandLineArgs();
             // 1st argument can be the plc ip-address, otherwise use default
             if (args.Length >= 2)
@@ -39,91 +41,69 @@ namespace S7CommPlusGUIBrowser
         private void btnConnect_Click(object sender, EventArgs e)
         {
             setStatus("connecting...");
-            if (conn != null)conn.Disconnect();
-            conn = new S7CommPlusConnection();
-            conn.OnlySecurePGOrPCAndHMI = onlySecurePGOrPCAndHMI;
+            connected = false;
+            if (conn == null)
+            {
+                conn = new S7CommPlusConnection();
+                conn.OnlySecurePGOrPCAndHMI = onlySecurePGOrPCAndHMI;
+            }
+            else
+            {
+                // 复用同一连接对象：已加载的离线工程（LoadSymbolsFromFile）不受影响
+                if (connected)
+                    conn.Disconnect();
+            }
             int res = conn.Connect(tbIpAddress.Text, tbPassword.Text);
             if (res != 0)
             {
                 setStatus("error");
                 return;
             }
-            setStatus("connected");
-            txt_plcInfo.Text = $"PLCType: {conn.PLCInformation.PLCType}|MLFB: {conn.PLCInformation.MLFB}|Firmware: {conn.PLCInformation.Firmware}";
-            treeView1.Nodes.Clear();
-            setStatus("loading...");
-            List<S7CommPlusConnection.DatablockInfo> dbInfoList;
-            res = conn.GetListOfDatablocks(out dbInfoList);
-            if (res != 0)
-            {
-                setStatus("error");
-                return;
-            }
-            TreeNode tn;
-            foreach (S7CommPlusConnection.DatablockInfo dbInfo in dbInfoList)
-            {
-                tn = treeView1.Nodes.Add(dbInfo.db_name);
-                tn.Nodes.Add("Loading...");
-                tn.Tag = dbInfo.db_block_ti_relid;
-                tn.ImageKey = "Datablock";
-                tn.SelectedImageKey = tn.ImageKey;
-            }
-            // Inputs
-            tn = treeView1.Nodes.Add("Inputs");
-            tn.Nodes.Add("Loading...");
-            tn.Tag = 0x90010000;
-            tn.ImageKey = "Default";
-            tn.SelectedImageKey = tn.ImageKey;
-            // Outputs
-            tn = treeView1.Nodes.Add("Outputs");
-            tn.Nodes.Add("Loading...");
-            tn.Tag = 0x90020000;
-            tn.ImageKey = "Default";
-            tn.SelectedImageKey = tn.ImageKey;
-            // Merker
-            tn = treeView1.Nodes.Add("Merker");
-            tn.Nodes.Add("Loading...");
-            tn.Tag = 0x90030000;
-            tn.ImageKey = "Default";
-            tn.SelectedImageKey = tn.ImageKey;
-            // S7Timers
-            tn = treeView1.Nodes.Add("S7Timers");
-            tn.Nodes.Add("Loading...");
-            tn.Tag = 0x90050000;
-            tn.ImageKey = "Default";
-            tn.SelectedImageKey = tn.ImageKey;
-            // S7Counters
-            tn = treeView1.Nodes.Add("S7Counters");
-            tn.Nodes.Add("Loading...");
-            tn.Tag = 0x90060000;
-            tn.ImageKey = "Default";
-            tn.SelectedImageKey = tn.ImageKey;
-
+            connected = true;
             setStatus("connected");
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
             setStatus("disconnecting...");
+            connected = false;
             if (conn != null) conn.Disconnect();
-            treeView1.Nodes.Clear();
+            // 树保留：断开只影响在线读取；重新 Connect 同一连接对象即可继续读值
             txt_plcInfo.Text = "PLCType:";
             setStatus("disconnected");
-            conn = null;
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (conn != null) conn.Disconnect();
+            if (conn != null)
+            {
+                conn.LoadSymbolsFromFile(null);
+                if (connected)
+                    conn.Disconnect();
+            }
         }
 
         private void treeView1_AfterExpand(object sender, TreeViewEventArgs e)
         {
-            if (e.Node.Nodes.Count < 0 || e.Node.Nodes[0].Text != "Loading...") return;
+            if (e.Node.Nodes.Count < 1 || e.Node.Nodes[0].Text != "Loading...") return;
 
             setStatus("loading...");
             e.Node.Nodes.Clear();
             uint relTiId = (uint)e.Node.Tag;
+            if (relTiId >= 0x90070000 && relTiId < 0x90080000)
+            {
+                // 多 PLC 工程：PLC 节点展开 = 该 PLC 的块 + 5 区（区 relid 带 PLC 索引变体）
+                int plcIndex = (int)((relTiId - 0x90070000) / 0x100);
+                List<S7CommPlusConnection.DatablockInfo> dbInfoList;
+                if (conn.GetListOfDatablocks(plcIndex, out dbInfoList) != 0)
+                {
+                    setStatus("error");
+                    return;
+                }
+                AddBlockNodes(e.Node, dbInfoList);
+                AddAreaNodes(e.Node, (uint)plcIndex * 0x100U);
+                return;
+            }
             PObject pObj = null;
             try
             {
@@ -318,7 +298,7 @@ namespace S7CommPlusGUIBrowser
                 case Softdatatype.S7COMMP_SOFTDATATYPE_DATEANDTIME:
                 case Softdatatype.S7COMMP_SOFTDATATYPE_LDT:
                 case Softdatatype.S7COMMP_SOFTDATATYPE_DTL:
-                    sk = "DateTime";
+                    sk = "Datetime";
                     break;
                 case Softdatatype.S7COMMP_SOFTDATATYPE_ANY:
                 case Softdatatype.S7COMMP_SOFTDATATYPE_POINTER:
@@ -361,14 +341,32 @@ namespace S7CommPlusGUIBrowser
             if (tag == null) return;
 
             tbSymbolicAddress.Text = tag.Address.GetAccessString();
-            
-            if (PlcTags.ReadTags(conn,new List<PlcTag> { tag}) != 0) return;
+            tbDatatype.Text = Softdatatype.Types.ContainsKey(tag.Datatype) ? Softdatatype.Types[tag.Datatype] : "UNKNOWN";
+
+            if (conn == null || (conn != null && !connected) || PlcTags.ReadTags(conn,new List<PlcTag> { tag}) != 0) return;
             tbValue.Text = tag.ToString();
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if (e.Node.Tag != null) return; // has relId
+            if (e.Node.Tag != null)
+            {
+                uint tag = (uint)e.Node.Tag;
+                if (tag >= 0x90070000 && tag < 0x90080000)
+                {
+                    // 选中 PLC 节点：切换活动 PLC 并显示其信息（离线读值/符号解析随之切换；在线单 PLC 无操作）
+                    conn.SelectPlc(e.Node.Text);
+                    txt_plcInfo.Text = $"PLCType: {conn.PLCInformation.PLCType}|MLFB: {conn.PLCInformation.MLFB}|Firmware: {conn.PLCInformation.Firmware}";
+                }
+                return; // has relId
+            }
+            if (e.Node.Parent == null)
+            {
+                // 无 Tag 的树根（兜底）：清空符号字段
+                tbSymbol.Text = "";
+                tbSymbolicAddress.Text = "";
+                return;
+            }
 
             string name = "";
             TreeNode tn = e.Node;
@@ -388,7 +386,20 @@ namespace S7CommPlusGUIBrowser
                 if (tn != null && tn.Tag != null)
                 { // don't add in/out/merker area as tag
                     uint relId = (uint)tn.Tag;
-                    if (relId == 0x90010000 || relId == 0x90020000 || relId == 0x90030000) tn = null;
+                    if ((relId >= 0x90010000 && relId < 0x90020000) ||   // Inputs（含 PLC 索引变体）
+                        (relId >= 0x90020000 && relId < 0x90030000) ||   // Outputs
+                        (relId >= 0x90030000 && relId < 0x90040000))     // Merker
+                    {
+                        TreeNode plcNode = tn.Parent; // 区上一级 = PLC 节点（单 PLC 时根即 PLC 节点）
+                        if (plcNode != null) conn.SelectPlc(plcNode.Text); // 读值解析切换到该 PLC
+                        tn = null;
+                    }
+                    else if (relId >= 0x90070000 && relId < 0x90080000)
+                    {
+                        // PLC 节点：符号名停止（PLC 名不进符号名），读值解析切换到该 PLC
+                        conn.SelectPlc(tn.Text);
+                        tn = null;
+                    }
                 }
                 name = escapeTiaString(nodeText, tn == null, isArray) + (name != "" ? "." : "") + name;
             }
@@ -400,6 +411,11 @@ namespace S7CommPlusGUIBrowser
         private void btnRead_Click(object sender, EventArgs e)
         {
             if (tbSymbol.Text == "") return;
+            if (!connected || conn == null)
+            {
+                MessageBox.Show("请先 Connect 到 PLC（离线浏览 + 在线读取）");
+                return;
+            }
 
             try
             {
@@ -409,6 +425,163 @@ namespace S7CommPlusGUIBrowser
             {
                 MessageBox.Show("ERROR: " + ex.Message);
             }
+        }
+
+        /// <summary>
+        /// 共享建树（在线/离线同一套代码，零分支）：
+        /// 单 PLC / 在线：树根 = 连接对象的 PLC 名（在线 Connect 第 8 步已读；离线 LoadSymbolsFromFile
+        /// 已镜像）→ GetListOfDatablocks 块节点（"Loading..." + ti relid）→ 5 个区节点。
+        /// 多 PLC 工程：每台 PLC 名直接作为并列根节点（不包工程名层；懒展开才取该 PLC 的块+区，
+        /// 区 relid 带 PLC 索引变体）。
+        /// 离线时这些 API 内部路由到工程符号（真正按需懒加载）；在线时走原网络路径。
+        /// </summary>
+        private void BuildProjectTree()
+        {
+            if (conn == null)
+            {
+                MessageBox.Show("请先 Connect 到 PLC 或打开离线工程");
+                return;
+            }
+            treeView1.Nodes.Clear();
+            setStatus("loading...");
+            txt_plcInfo.Text = $"PLCType: {conn.PLCInformation.PLCType}|MLFB: {conn.PLCInformation.MLFB}|Firmware: {conn.PLCInformation.Firmware}";
+            List<string> plcNames = conn.GetListOfPlcs();
+            if (plcNames.Count > 1)
+            {
+                // 多 PLC 工程：每台 PLC 名 = 一个根节点（统一从 PLC 名开始，不包工程名层）
+                for (int i = 0; i < plcNames.Count; i++)
+                {
+                    TreeNode plcNode = treeView1.Nodes.Add(plcNames[i]);
+                    plcNode.Nodes.Add("Loading...");
+                    plcNode.Tag = 0x90070000U + (uint)i * 0x100U; // PLC 节点哨兵（区变体同款编码）
+                    plcNode.ImageKey = "Library";
+                    plcNode.SelectedImageKey = plcNode.ImageKey;
+                    plcNode.Expand(); // 与单 PLC 根一致：建树即展开一层（块列表+5 区，仅一层按需）
+                }
+                setStatus("load finished");
+                return;
+            }
+            string plcName = plcNames.Count == 1 ? plcNames[0] : null;
+            TreeNode root = treeView1.Nodes.Add(string.IsNullOrEmpty(plcName) ? "(PLC)" : plcName);
+            root.ImageKey = "Library";
+            root.SelectedImageKey = root.ImageKey;
+            root.Tag = 0x90070000; // 根哨兵：AfterSelect 名称回走在根处停止（PLC 名不进符号名）
+            List<S7CommPlusConnection.DatablockInfo> dbInfoList;
+            if (conn.GetListOfDatablocks(out dbInfoList) != 0)
+            {
+                setStatus("error");
+                return;
+            }
+            AddBlockNodes(root, dbInfoList);
+            AddAreaNodes(root, 0);
+            root.Expand();
+            setStatus("load finished");
+        }
+
+        /// <summary>块子节点（"Loading..." + ti relid；在线/离线同款）。</summary>
+        private void AddBlockNodes(TreeNode parent, List<S7CommPlusConnection.DatablockInfo> dbInfoList)
+        {
+            TreeNode tn;
+            foreach (S7CommPlusConnection.DatablockInfo dbInfo in dbInfoList)
+            {
+                tn = parent.Nodes.Add(dbInfo.db_name);
+                tn.Nodes.Add("Loading...");
+                tn.Tag = dbInfo.db_block_ti_relid;
+                tn.ImageKey = "Datablock";
+                tn.SelectedImageKey = tn.ImageKey;
+            }
+        }
+
+        /// <summary>5 个区子节点（区 relid = 基础值 + plcOff；plcOff=0 为单 PLC/在线）。</summary>
+        private void AddAreaNodes(TreeNode parent, uint plcOff)
+        {
+            TreeNode tn;
+            // Inputs
+            tn = parent.Nodes.Add("Inputs");
+            tn.Nodes.Add("Loading...");
+            tn.Tag = 0x90010000U + plcOff;
+            tn.ImageKey = "Default";
+            tn.SelectedImageKey = tn.ImageKey;
+            // Outputs
+            tn = parent.Nodes.Add("Outputs");
+            tn.Nodes.Add("Loading...");
+            tn.Tag = 0x90020000U + plcOff;
+            tn.ImageKey = "Default";
+            tn.SelectedImageKey = tn.ImageKey;
+            // Merker
+            tn = parent.Nodes.Add("Merker");
+            tn.Nodes.Add("Loading...");
+            tn.Tag = 0x90030000U + plcOff;
+            tn.ImageKey = "Default";
+            tn.SelectedImageKey = tn.ImageKey;
+            // S7Timers
+            tn = parent.Nodes.Add("S7Timers");
+            tn.Nodes.Add("Loading...");
+            tn.Tag = 0x90050000U + plcOff;
+            tn.ImageKey = "Default";
+            tn.SelectedImageKey = tn.ImageKey;
+            // S7Counters
+            tn = parent.Nodes.Add("S7Counters");
+            tn.Nodes.Add("Loading...");
+            tn.Tag = 0x90060000U + plcOff;
+            tn.ImageKey = "Default";
+            tn.SelectedImageKey = tn.ImageKey;
+        }
+
+        private void btnOfflineBrowse_Click(object sender, EventArgs e)
+        {
+            string path;
+            using (OpenFileDialog dlg = new OpenFileDialog())
+            {
+                dlg.Title = "选择博途工程（.apXX 归档 / .zapXX 归档 / 解包目录）";
+                dlg.Filter = "TIA 工程 (*.ap*;*.zap*)|*.ap*;*.zap*|所有文件 (*.*)|*.*";
+                if (dlg.ShowDialog(this) != DialogResult.OK) return;
+                path = dlg.FileName;
+            }
+            setStatus("loading offline project...");
+            if (conn == null)
+            {
+                conn = new S7CommPlusConnection();
+                conn.OnlySecurePGOrPCAndHMI = onlySecurePGOrPCAndHMI;
+            }
+            Task.Factory.StartNew(delegate()
+            {
+                try
+                {
+                    // 唯一入口：LoadSymbolsFromFile 之后浏览/建树与在线完全一致
+                    int res = conn.LoadSymbolsFromFile(path);
+                    BeginInvoke(new Action(delegate()
+                    {
+                        if (res != 0)
+                        {
+                            setStatus("offline load failed");
+                            MessageBox.Show("加载工程失败（详见控制台错误输出）");
+                            return;
+                        }
+                        BuildProjectTree();
+                        setStatus("offline project loaded");
+                    }));
+                }
+                catch (Exception ex)
+                {
+                    BeginInvoke(new Action(delegate()
+                    {
+                        setStatus("offline load failed: " + ex.Message);
+                        MessageBox.Show("加载工程失败: " + ex.Message);
+                    }));
+                }
+            });
+        }
+
+        private void btnOnlineBrowse_Click(object sender, EventArgs e)
+        {
+            if (!connected || conn == null)
+            {
+                MessageBox.Show("请先 Connect 到 PLC");
+                return;
+            }
+            conn.LoadSymbolsFromFile(null); // 卸载工程，回到在线浏览
+            BuildProjectTree();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
