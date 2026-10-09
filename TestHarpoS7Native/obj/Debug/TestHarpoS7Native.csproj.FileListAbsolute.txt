@@ -44,3 +44,11 @@ D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.csproj.CopyComplete
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.exe
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.pdb
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\TestHarpoS7Native\bin\Debug\TestHarpoS7Native.exe
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\TestHarpoS7Native\bin\Debug\TestHarpoS7Native.pdb
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\TestHarpoS7Native\bin\Debug\HarpoS7Wrapper.dll
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.csprojAssemblyReference.cache
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.csproj.CoreCompileInputs.cache
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.csproj.CopyComplete
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.exe
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\TestHarpoS7Native\obj\Debug\TestHarpoS7Native.pdb

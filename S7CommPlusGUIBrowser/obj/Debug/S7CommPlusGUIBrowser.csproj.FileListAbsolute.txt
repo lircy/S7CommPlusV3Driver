@@ -57,3 +57,15 @@ D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommP
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.CopyComplete
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.exe
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.pdb
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusGUIBrowser.exe.config
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusGUIBrowser.exe
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusGUIBrowser.pdb
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusDriver.dll
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csprojAssemblyReference.cache
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.Form1.resources
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.Properties.Resources.resources
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.GenerateResource.cache
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.CoreCompileInputs.cache
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.CopyComplete
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.exe
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.pdb

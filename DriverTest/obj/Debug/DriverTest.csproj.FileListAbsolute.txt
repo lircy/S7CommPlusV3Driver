@@ -61,3 +61,13 @@ D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe.config
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.exe
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\bin\Debug\DriverTest.pdb
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\bin\Debug\BouncyCastle.Crypto.dll
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\bin\Debug\S7CommPlusDriver.dll
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csprojAssemblyReference.cache
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CoreCompileInputs.cache
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
+D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
