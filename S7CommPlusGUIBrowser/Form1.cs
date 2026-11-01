@@ -45,7 +45,7 @@ namespace S7CommPlusGUIBrowser
             if (conn == null)
             {
                 conn = new S7CommPlusConnection();
-                conn.OnlySecurePGOrPCAndHMI = onlySecurePGOrPCAndHMI;
+                conn.UseSecureCommunication = onlySecurePGOrPCAndHMI;
             }
             else
             {
@@ -542,7 +542,7 @@ namespace S7CommPlusGUIBrowser
             if (conn == null)
             {
                 conn = new S7CommPlusConnection();
-                conn.OnlySecurePGOrPCAndHMI = onlySecurePGOrPCAndHMI;
+                conn.UseSecureCommunication = onlySecurePGOrPCAndHMI;
             }
             Task.Factory.StartNew(delegate()
             {

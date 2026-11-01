@@ -36,7 +36,7 @@ namespace DriverTest
             Console.WriteLine("Main - Versuche Verbindungsaufbau zu: " + HostIp);
 
             S7CommPlusConnection conn = new S7CommPlusConnection();
-            conn.OnlySecurePGOrPCAndHMI = false;
+            conn.UseSecureCommunication = false;
             
             System.Diagnostics.Stopwatch stopwatch1 = new System.Diagnostics.Stopwatch();
             stopwatch1.Start();

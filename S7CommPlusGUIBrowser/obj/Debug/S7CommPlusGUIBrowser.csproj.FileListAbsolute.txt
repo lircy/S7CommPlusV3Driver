@@ -49,7 +49,6 @@ D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommP
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusGUIBrowser.exe
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusGUIBrowser.pdb
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\bin\Debug\S7CommPlusDriver.dll
-D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csprojAssemblyReference.cache
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.Form1.resources
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.Properties.Resources.resources
 D:\Desktop\demo\Secure\S7CommPlusV3Driver\S7CommPlusGUIBrowser\obj\Debug\S7CommPlusGUIBrowser.csproj.GenerateResource.cache

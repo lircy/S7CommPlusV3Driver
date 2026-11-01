@@ -71,3 +71,4 @@ D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\
 D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csproj.CopyComplete
 D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.exe
 D:\Desktop\S7浏览测试情况20261008\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.pdb
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\DriverTest\obj\Debug\DriverTest.csprojAssemblyReference.cache
