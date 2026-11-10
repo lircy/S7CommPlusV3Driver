@@ -1,0 +1,10 @@
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\bin\Debug\TestS7CommPlusDriver.Console.exe.config
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\bin\Debug\TestS7CommPlusDriver.Console.exe
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\bin\Debug\TestS7CommPlusDriver.Console.pdb
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\bin\Debug\BouncyCastle.Crypto.dll
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\bin\Debug\Net4x.Extensions.Logging.Abstractions.dll
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\bin\Debug\S7CommPlusDriver.dll
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\obj\Debug\TestS7CommPlusDriver.Console.csproj.CoreCompileInputs.cache
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\obj\Debug\TestS7CommPlusDriver.Console.csproj.CopyComplete
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\obj\Debug\TestS7CommPlusDriver.Console.exe
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.Console\obj\Debug\TestS7CommPlusDriver.Console.pdb

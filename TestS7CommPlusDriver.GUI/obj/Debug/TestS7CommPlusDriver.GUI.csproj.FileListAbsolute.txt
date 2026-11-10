@@ -1,0 +1,13 @@
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\bin\Debug\TestS7CommPlusDriver.GUI.exe.config
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\bin\Debug\TestS7CommPlusDriver.GUI.exe
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\bin\Debug\TestS7CommPlusDriver.GUI.pdb
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\bin\Debug\Net4x.Extensions.Logging.Abstractions.dll
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\bin\Debug\S7CommPlusDriver.dll
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\obj\Debug\TestS7CommPlusDriver.GUI.csprojAssemblyReference.cache
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\obj\Debug\TestS7CommPlusDriver.GUI.Form1.resources
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\obj\Debug\TestS7CommPlusDriver.GUI.Properties.Resources.resources
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\obj\Debug\TestS7CommPlusDriver.GUI.csproj.GenerateResource.cache
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\obj\Debug\TestS7CommPlusDriver.GUI.csproj.CoreCompileInputs.cache
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\obj\Debug\TestS7CommPlusDriver.GUI.csproj.CopyComplete
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\obj\Debug\TestS7CommPlusDriver.GUI.exe
+D:\Desktop\demo\Secure\S7CommPlusV3Driver\TestS7CommPlusDriver.GUI\obj\Debug\TestS7CommPlusDriver.GUI.pdb
